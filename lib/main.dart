@@ -1,5 +1,6 @@
 import 'package:contactapp/model/view_model_user.dart';
 import 'package:contactapp/pages/home_page.dart';
+import 'package:contactapp/pages/login.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => UsersViewModel()),
       ],
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: LoginAct()),
     );
   }
 }

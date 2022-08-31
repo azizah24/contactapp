@@ -44,4 +44,20 @@ class APIService {
     );
     var res = json.decode(rdata.body);
   }
+
+  Future login(email, pass) async {
+    var headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    };
+
+    var body = {"email": email, "password": pass};
+
+    var rdata = await http.post(
+      Uri.parse('$url/api/login'),
+      headers: headers,
+      body: jsonEncode(body),
+    );
+    var res = json.decode(rdata.body);
+  }
 }
